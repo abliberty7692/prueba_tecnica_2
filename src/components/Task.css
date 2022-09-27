@@ -1,11 +1,17 @@
 .Task {
     width: 200px;
+    height: 150px;
     margin: 10px;
+    padding: 10px;
     font-family: 'Roboto', sans-serif;
-    text-align: center;
     font-weight: 700;
     border: 1px solid #000000;
     border-radius: 10px;
+    text-align: center;
+}
+
+img {
+    width: 1.1em;
 }
 
 .title {
@@ -14,6 +20,7 @@
 
 .content {
     font-size: 14px;
+    text-align: justify;
 }
 
 .see {
@@ -28,4 +35,22 @@
 .see:hover{
     background-color: #000000;
     color: #FFFFFF;
+}
+
+.process {
+    background-color: #FEF403;
+    border: 1px solid #FFCD1A;
+    padding: 2px 5px;
+}
+
+.pending {
+    background-color: #F87272;
+    border: 1px solid #DB2E2E;
+    padding: 2px 5px;
+}
+
+.completed {
+    background-color: #CCFE03;
+    border: 1px solid #1AFF3E;
+    padding: 2px 5px;
 }

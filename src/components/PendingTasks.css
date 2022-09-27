@@ -46,11 +46,10 @@
 
 .tasks-container {
     width: 95%;
-    height: 900px; /*Modificar luego*/
+    height: auto; /*Modificar luego*/
     border: 1px solid #000000;
     border-radius: 15px;
-    display: flex;
+    display: inline-flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: center;
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import './Task.css';
+import person from '../assets/user.png'
+import clock from '../assets/clock.png'
 
 class Task extends React.Component {
     render() {
@@ -11,8 +13,8 @@ class Task extends React.Component {
         let current_status = status_features[this.props.task_status];
         return <div className='Task'>
             <h3 className="title">{this.props.task_title}</h3>
-            <p className="content">Asignado: {this.props.task_assigned_to}</p>
-            <p className="content">Estátus: <span className={current_status[1]}>{current_status[0]}</span></p>
+            <p className="content"><img src={person} alt="person"/>Asignado: {this.props.task_assigned_to}</p>
+            <p className="content"><img src={clock} alt="clock"/>Estátus: <span className={current_status[1]}>{current_status[0]}</span></p>
             <button className="see">Ver</button>
         </div>
     }
