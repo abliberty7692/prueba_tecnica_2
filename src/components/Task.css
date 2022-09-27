@@ -1,0 +1,31 @@
+.Task {
+    width: 200px;
+    margin: 10px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 16px;
+}
+
+.content {
+    font-size: 14px;
+}
+
+.see {
+    width: 80%;
+    margin: 10px;
+    border: 1px solid #000000;
+    border-radius: 5;
+    font-size: 16px;
+    background-color: #FFFFFF;
+}
+
+.see:hover{
+    background-color: #000000;
+    color: #FFFFFF;
+}

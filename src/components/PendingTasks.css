@@ -1,0 +1,56 @@
+.PendingTasks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.filter-input {
+    width: 30%;
+    height: 10%;
+    min-width: 300px;
+    min-height: 30px;
+    margin: 15px 0;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid #A6A6A6;
+}
+
+.button {
+    min-width: 120px;
+    min-height: 40px;
+    margin: 10px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+.button-blue {
+    color: #FFFFFF;
+    background-color: #28AED9;
+}
+
+.button-blue:hover {
+    background-color: #186f8b;
+}
+
+.button-green {
+    background-color: #96F8B1;
+}
+
+.button-green:hover {
+    background-color: #0ba836;
+}
+
+.tasks-container {
+    width: 95%;
+    height: 900px; /*Modificar luego*/
+    border: 1px solid #000000;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
