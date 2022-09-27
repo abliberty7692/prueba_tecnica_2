@@ -1,0 +1,38 @@
+.NewTask {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_field {
+    min-width: 300px;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.input {
+    height: 2em;
+    padding: 5px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.submit {
+    min-height: 3em;
+    width: 50%;
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: #FFFFFF;
+    background-color: #2294B8;
+    align-self: center;
+}
