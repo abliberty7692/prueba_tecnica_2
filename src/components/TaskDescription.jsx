@@ -7,19 +7,32 @@ class TaskDescription extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            title: this.props.title,
-            employee_key: this.props.employee_key,
-            description: this.props.description,
+            title: "Generar Reporte",
+            employee_key: 1,
+            description: "Generar el reporte",
             modify: false,
-            selectedFile: this.props.selectedFile,
-            isSelectedFile: this.props.selectedFile!==null
+            selectedFile: null,
+            isSelectedFile: false
         }
+        this.getInitialData = this.getInitialData.bind(this);
         this.setTitle = this.setTitle.bind(this);
         this.setEmployeeKey = this.setEmployeeKey.bind(this);
         this.setDescription = this.setDescription.bind(this);
         this.save_changes = this.save_changes.bind(this);
         this.modify_data = this.modify_data.bind(this);
         this.getDropedFiles = this.getDropedFiles.bind(this);
+        this.getEmployees = this.getEmployees.bind(this);
+    }
+
+    getInitialData() {
+        this.setState({
+            title: "Generar Reporte",
+            employee_key: 1,
+            description: "Generar el reporte",
+            modify: false,
+            selectedFile: null,
+            isSelectedFile: false
+        })
     }
 
     setTitle(e) {
@@ -64,8 +77,12 @@ class TaskDescription extends React.Component {
         }
     }
 
+    getEmployees() {
+        return ["David Betanzos", "Cynthia Fonseca", "Alan Fernandez", "Esteban Avelar", "Arantxa Herrera"]
+    }
+
     render() {
-        const employees_list=this.props.employees.map((employee, k)=>{
+        const employees_list=this.getEmployees().map((employee, k)=>{
             return <option key={employee}>{employee}</option>
         })
         let submit_button = null;
@@ -87,17 +104,17 @@ class TaskDescription extends React.Component {
             <form className='nt_form'>
                 <div className="form_field">
                     <h3>Titulo:</h3>
-                        <input className="input" type="text" readOnly={!this.state.modify} name='title' defaultValue={this.props.title} onChange={this.setTitle} ></input>
+                        <input className="input" type="text" readOnly={!this.state.modify} name='title' defaultValue={this.state.title} onChange={this.setTitle} ></input>
                 </div>
                 <div className="form_field">
                     <h3>Asignar:</h3>
-                        <select disabled={!this.state.modify} className="input" onChange={this.setEmployeeKey} defaultValue={employees_list[this.props.employee_key]}>
+                        <select disabled={!this.state.modify} className="input" onChange={this.setEmployeeKey} defaultValue={employees_list[this.state.employee_key]}>
                             {employees_list}
                         </select>
                 </div>
                 <div className="form_field">
                     <h3>Descripción:</h3>
-                        <textarea className="input description" readOnly={!this.state.modify} defaultValue={this.props.description} onChange={this.setDescription} >
+                        <textarea className="input description" readOnly={!this.state.modify} defaultValue={this.state.description} onChange={this.setDescription} >
                         </textarea>
                 </div>
                 <div className={"dnd_file "+(this.state.isSelectedFile? "no_display":"")} >

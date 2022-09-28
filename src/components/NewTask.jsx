@@ -2,8 +2,17 @@ import React from 'react';
 import './NewTask.css';
 
 class NewTask extends React.Component {
+    constructor(props) {
+        super(props);
+        this.getEmployees = this.getEmployees.bind(this);
+    }
+
+    getEmployees() {
+        return ["David Betanzos", "Cynthia Fonseca", "Alan Fernandez", "Esteban Avelar", "Arantxa Herrera"]
+    }
+
     render() {
-        const employees_list=this.props.employees.map((employee)=>{
+        const employees_list=this.getEmployees().map((employee)=>{
             return <option>{employee}</option>
         })
         return <div className="NewTask">
