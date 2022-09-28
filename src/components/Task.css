@@ -14,12 +14,12 @@ img {
     width: 1.1em;
 }
 
-.title {
+.task-title {
     font-size: 16px;
 }
 
 .content {
-    font-size: 14px;
+    font-size: 12px;
     text-align: justify;
 }
 
@@ -37,19 +37,19 @@ img {
     color: #FFFFFF;
 }
 
-.process {
+.En_Progreso {
     background-color: #FEF403;
     border: 1px solid #FFCD1A;
     padding: 2px 5px;
 }
 
-.pending {
+.Pendiente {
     background-color: #F87272;
     border: 1px solid #DB2E2E;
     padding: 2px 5px;
 }
 
-.completed {
+.Completado {
     background-color: #CCFE03;
     border: 1px solid #1AFF3E;
     padding: 2px 5px;

@@ -1,16 +1,20 @@
 import React from "react";
 import "./Login.css";
 import userimg from "../assets/profile.png";
+import { Navigate } from 'react-router-dom';
+
 export default class Login extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             usuario: "",
-            password: ""
+            password: "",
+            loggedIn: false
         }
 
         this.setUsuario = this.setUsuario.bind(this);
         this.setPassword = this.setPassword.bind(this);
+        this.isLoggedIn = this.isLoggedIn.bind(this);
         this.login = this.login.bind(this);
     }
 
@@ -25,6 +29,12 @@ export default class Login extends React.Component {
             password: e.target.value
         })
     }    
+
+    isLoggedIn() {
+        this.setState({
+            loggedIn: true
+        });
+    }
 
     login(event) {
         
@@ -48,7 +58,9 @@ export default class Login extends React.Component {
                 .then(response=>response.json())
                 .then(data=>{
                     sessionStorage.setItem("token", data.token);
-                    console.log(data.token);
+                    localStorage.setItem("nombre", data.Nombre);
+                    localStorage.setItem("email", data.email);
+                    this.isLoggedIn();
                 });
     }
 
@@ -61,6 +73,7 @@ export default class Login extends React.Component {
                 <button className="button button-blue" type="submit">Ingresar</button>
             </form>
             <a href="localhost:3000" className="link link-blue">Crear Cuenta</a>
+            {this.state.loggedIn && <Navigate replace to='/home'/>}
         </div>
     }
 }

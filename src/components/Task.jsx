@@ -1,20 +1,15 @@
 import React from 'react';
 import './Task.css';
-import person from '../assets/user.png'
-import clock from '../assets/clock.png'
+import person from '../assets/user.png';
+import clock from '../assets/clock.png';
 
 class Task extends React.Component {
     render() {
-        let status_features = {
-            0:["Pendiente", "pending"],
-            1:["En Proceso", "process"],
-            2:["Completado", "completed"]
-        }   
-        let current_status = status_features[this.props.task_status];
+        let current_status = this.props.task_status;
         return <div className='Task'>
-            <h3 className="title">{this.props.task_title}</h3>
+            <h3 className="task-title">{this.props.task_title}</h3>
             <p className="content"><img src={person} alt="person"/>Asignado: {this.props.task_assigned_to}</p>
-            <p className="content"><img src={clock} alt="clock"/>Estátus: <span className={current_status[1]}>{current_status[0]}</span></p>
+            <p className="content"><img src={clock} alt="clock"/>Estátus: <span className={current_status.replace(" ", "_")}>{current_status}</span></p>
             <button className="see">Ver</button>
         </div>
     }
