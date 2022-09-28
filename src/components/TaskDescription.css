@@ -37,6 +37,85 @@
     font-weight: 700;
     font-size: 14px;
     color: #FFFFFF;
-    background-color: #2294B8;
     align-self: center;
+}
+
+.save {
+    background-color: #66cc00;
+}
+
+.modify {
+    background-color: #2294B8;
+}
+
+.dnd_file {
+    width: 70%;
+    height: 20vh;
+    margin: 20px auto;
+    border: 2px dashed #000000;
+    text-align: center;
+}
+
+#input-file-upload {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.dnd_text {
+    font-size: 14px;
+}
+
+.upload-button {
+    cursor: pointer;
+    padding: 0.25rem;
+    font-size: 1rem;
+    border: none;
+    background-color: transparent;
+}
+
+.upload-button:hover {
+    text-decoration-line: underline;
+  }
+
+.no_display {
+    display: none;
+}
+
+.selected_file {
+    height: 40px;
+    width: 90%;
+    display: grid;
+    grid-template-areas: 
+        "a b b"
+        "a c d";
+    row-gap: 3px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    margin: 20px auto;
+    padding: 10px;
+    justify-self: center;
+    align-self: center;
+}
+
+.file-img {
+    grid-area: a;
+    width: 40px;
+    margin: 3px;
+}
+
+.file-name {
+    grid-area: b;
+    font-size: 14px;
+    margin: 3px; 
+}
+
+.file-type {
+    grid-area: c;
+    margin: 3px;
+}
+
+.file-size {
+    grid-area: d;
+    margin: 3px;
 }

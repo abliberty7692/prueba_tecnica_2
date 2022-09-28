@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App">
     <Header title="Nueva Tarea" uname="David S. Betanzos" mail="dbetanzos@glwinba.com"/>
-    <TaksDescription title="Generar el reporte" employee_key={3} description="Generar el reporte" employees={["Arantxa Herrera", "David Betanzos", "Alan Fernandez", "Esteban Avelar", "Cynthia Fonseca"]}/>
+    <TaksDescription title="Generar el reporte" employee_key={3} description="Generar el reporte" employees={["Arantxa Herrera", "David Betanzos", "Alan Fernandez", "Esteban Avelar", "Cynthia Fonseca"]} selectedFile={null}/>
     </div>
   );
 }
